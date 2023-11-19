@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body{
+    background-color: rgb(147, 147, 147);
+    background-image: url("https://getwallpapers.com/wallpaper/full/1/a/5/1392020-download-free-dark-background-images-2400x1154-for-phones.jpg");
+}
+
+.nav_items{
+    display: grid;
+    grid-template-columns: 70% 70% 70% 70% 70% 70%;
+}
+
+.nav_item{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Cairo Play', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 30%;
+    transition: transform 0.2s ease-in;
+    border-radius: 30px;
+}
+
+
+.nav_item:hover{
+    transform: translate(-4px, 0px);
+    box-shadow: 1px 1px 1px 1px;
+}
+
+nav{
+    position: fixed;
+    display: inline;
+    background-color: rgb(83, 0, 139);
+    border: 1px solid black;
+    padding: 2% 100% 1% 27%;
+    margin-top: -2.55%;
+    margin-left: -1%;
+}
+
+h1{
+    margin-top: 6%;
+    color: rgb(83, 0, 139);
+}
+
+h2{
+    color: rgb(83, 0, 139);
+    margin-top: 10%;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+h4{
+    margin-bottom: -2%;
+}
+
+.main{
+    border: 1px solid black;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: -0.5%;
+    padding-bottom: 15%;
+    background-color: rgb(201, 201, 201);
+    box-shadow: 0px 0px 60px 50px;
+}
+
+.footer1{
+    font-size: 20px;
+    display: inline;
+    margin-bottom: -2%;
+    color: aliceblue;
+}
+
+.footer2{
+    display: inline;
+    margin-left: 48%;
+    
+}
+
+footer{
+    font-family: 'Cairo Play', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/footer.jpg);
+    margin: 1% 0 -1% 0%;
+    padding: 2% 0% 5% 20%;
+}
+
+.footer{
+    display: inline;
+    padding: 1% 1% 1% 1%;
+    margin-left: -30%;
+    margin-bottom: -6.2%;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: rgb(166, 165, 165);
+}
+
+li{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-left: 36%;
+}
+
