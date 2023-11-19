@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <h1>Завдання 3</h1>
+    <a id="back" href="index.html"><img width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"/><a>
+
+    <h2 class="task">Сформуйте одновимірний масив (не менше 15 елементів, для генерації значень масиву можна скористатися функцією random об'єкта Math), виведіть значення цього масиву на екран у рядок. Виконайте завдання відповідно до вашого номера в журналі, використовуючи вбудовані методи масивів.</h2>
+    <h3>//1.7.Знайти середнє арифметичне від’ємних чисел і визначити кількість чисел, що за величиною великих А і стоять на парних місцях.</h3>
+    <script>
+        function rand_arr(){
+            let arr = [];
+            for(let i=0; i < 16; i++){
+            arr.push(Math.ceil(Math.random() * 100));
+            }
+            return arr;
+        }
+
+        let array = rand_arr();
+        document.write("<h2>Масив з 15ти елементів: "+array+"</h2>");
+
+        let negetive_array = array.filter(function(n){
+            return n < 0;
+        });
+
+        let avg_neg_arr;
+        document.write("<h2>Середнє арифматичне від’ємних чисел: </h2>");
+
+        document.write("<h2>Масив з виконаним завданням: "+array+"</h2>");
+
+    </script>
+</body>
+</html>

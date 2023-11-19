@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <h1>Завдання 2</h1>
+    <a id="back" href="index.html"><img width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"/><a>
+
+    <h2 class="task">Сформуйте одновимірний масив (не менше 15 елементів, для генерації значень масиву можна скористатися функцією random об'єкта Math), виведіть значення цього масиву на екран у рядок. Виконайте завдання відповідно до вашого номера в журналі, не використовуючи вбудовані функції.</h2>
+    <h3>//1.7.Знайти мінімальний елемент та поміняти його місцями з третім елементом масиву.</h3>
+    <script>
+        function rand_arr(){
+            let arr = [];
+            for(let i=0; i < 16; i++){
+            arr.push(Math.ceil(Math.random() * 100));
+            }
+            return arr;
+        }
+
+        let array = rand_arr();
+        document.write("<h2>Масив з 15ти елементів: "+array+"</h2>");
+
+        let temp = [];
+        for(let n of array){
+            temp.push(n);
+        }
+
+        for(let i = 0; i < temp.length; i++){
+            for(let j =0; j < temp.length; j++){
+                if(temp[i] < temp[j]){
+                let temp_num = temp[i];
+                temp.splice(i , 1, temp[j]);
+                temp.splice(j, 1, temp_num);
+            }
+        }
+    }
+
+        let temp_num;
+        for(let i = 0; i < array.length; i++){
+            if(temp[0] === array[i]){
+                temp_num = array[2];
+                array.splice(2, 1,temp[0]);
+                array.splice(i, 1,temp_num);
+            } 
+        }
+
+        document.write("<h2>Масив з поміняним числом індексу 3 і мінімальним елементом: "+ array +"</h2>");
+
+    </script>
+
+</body>
+</html>

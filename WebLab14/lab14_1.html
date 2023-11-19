@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <script>
+
+        document.write("<h1>Завдання 1</h1>");
+        document.write("<a id='back' href='index.html'><img width='48' height='48' src='https://img.icons8.com/color/48/circled-chevron-left--v1.png' alt='circled-chevron-left--v1'/><a>");
+
+        let n = 10;
+        let Treag = [];
+        Treag = [1,2,3,4,5,6,7,8,9,10];
+        Treag = Treag.map(function(n){
+            return n*(n+1)/2;
+        });
+
+        document.write("<h3>//1.Створіть масив Treag «трикутних» чисел, тобто, чисел виду n(n+1)/2 (де n=1,2,… 10) і виведіть значення цього масиву на екран у рядок (через 2 пробіли).</h3>");
+        document.write("<h2>Масив Tread (n*(n+1)/2): ");
+
+        Treag.forEach(function(item){
+            document.write(item + "  ");
+        });
+        document.write("</h2>");
+        
+        let kvd = [1,2,3,4,5,6,7,8,9,10];
+        kvd = kvd.map(function(n){
+            return n**2;
+        });
+
+        document.write("<h3>//2.Створіть масив kvd квадратів натуральних чисел від 1 до 10, виведіть значення цього масиву на екран у рядок.</h3>");
+        document.write("<h2>Масив kvd (n^2): "+ kvd +".</h2>");
+
+        let rez = Treag.concat(kvd);       
+
+        document.write("<h3>//3.Об'єднайте ці 2 масиви в масив rez, виведіть результат на екран.</h3>");
+        document.write("<h2>Масив rez (Tread + kvd): "+ rez +".</h2>");
+
+        rez.reverse()
+        document.write("<h3>//4.Відсортуйте масив rez у зворотному порядку, виведіть результат на екран.</h3>");
+        document.write("<h2>Зворотній масив rez: "+ rez +".</h2>");
+        
+
+    </script>
+</body>
+</html>

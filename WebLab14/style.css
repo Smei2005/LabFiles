@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(136, 136, 136);
+    background-image: url("img/bodyback.jpg");
+}
+
+.main{
+    border: 1px solid rgb(73, 73, 56);
+    border-radius: 5px;
+    background-image: url("img/back.jpg");
+    background-color: rgba(240, 248, 255, 0.178);
+    display: inline-flexbox;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 4%;
+    padding: 5% 1% 15% 1%;
+    justify-content: center;
+}
+
+p{
+    color: #00B3F5;
+     font-size: 20px;
+      margin-left: 70%
+}
+
+.tasks{
+    text-align: center;
+}
