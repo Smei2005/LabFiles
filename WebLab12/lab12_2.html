@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Завдання 2</title>
+	</head>	
+	<body>
+		<script>
+			document.write("<h1 style='text-align: center'>Знаходження меншого серед трьох чисел</h1>");
+            let value1 = prompt("Значення 1");
+            let value2 = prompt("Значення 2");
+            let value3 = prompt("Значення 3");
+
+            if(value1 > value2 && value2 < value3){
+                document.write("<h2>Найменше число: " + value2 + "<h3>");
+            }else if(value2 > value1 && value1 < value3){
+                document.write("<h2>Найменше число: " + value1 + "<h3>");
+            }else if(value1 > value3 && value3 < value2){
+                document.write("<h2>Найменше число: " + value3 + "<h3>");
+            }else{
+                document.write("<h2>Ви ввели некоректні дані!<h3>");
+            }
+		</script>
+	</body>
+</html>

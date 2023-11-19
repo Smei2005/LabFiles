@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Карпляк, ПП-26</title>
+	</head>	
+	<body>
+		<script>
+			function Multiply(array, number=1){
+                for(let i in array){
+                    array[i] = array[i] * number;
+                }
+                return array;
+            }
+
+            let array = [44, 6, 2, 7];
+            document.write("<h1>Масив: " + array + "</h1>");
+
+            document.write("<h1>Масив: " + Multiply(array, 4) + "</h1>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Карпляк, ПП-26</title>
+	</head>	
+	<body>
+		<script>
+			function CommandDoor(condition = "відкриті", codeDefend = "розблоковано"){
+                return "Стан: " + condition + "<br>" + "Замок: " + codeDefend;
+            } 
+
+            document.write("<h1 style='text-align:center'>Стан дверей(за замовчуванням)</h1>");
+            document.write("<h2 style='text-align:center'>" + CommandDoor() + " </h2>");
+
+            document.write("<br><h1 style='text-align:center'>Стан дверей</h1>");
+            document.write("<h2 style='text-align:center'>" + CommandDoor("закриті", "заблоковано") + " </h2>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script>
+            let guess = Math.random() * 100; // генерація випадкового числа
+			guess = Math.floor(guess); // відкидання дробової частини
+			let f = true; 
+			let history = [];
+			let number; 
+			let count = 0;
+
+            number = parseInt(prompt("Виберіть режим, відгадуєте ви(1) відгадує компютер(2)"));
+            if(number == 1){
+			let answer = confirm("Зіграємо?"); 
+			if (answer) {
+				while (f) {
+					number = parseInt(prompt("введіть число")); 
+					history.push(number);
+					count++;
+					if (number == guess) {
+						alert("Ви вгадали\n кількість спроб: "+ count +". Загадане число: " +  guess +". Введені значення: " +  history); 
+						f = false;
+					} 	
+						else 
+							if (number > guess) {
+								alert("Число менше, спробуйте ще раз");
+							} 	
+							else {
+								alert("Число більше, спробуйте ще раз");
+							}
+				}
+			} 
+        }
+
+        else if(number == 2){
+            number = 50;
+            step = 10;
+            while (f) {
+					count++;
+					history.push(number);
+					if (number == guess) {
+						alert("Ви вгадали\n кількість спроб: "+ count +". Загадане число: " +  guess +". Введені значення: " +  history);  	
+						f = false;
+					} 	
+						else 
+							if (number > guess) {
+                                number = Math.floor(number - step);
+							} 	
+							else {
+                                number = Math.ceil(number + step);
+							}
+                            step = step - 1;
+				}
+        }
+
+        else alert("Невірний режим");
+
+            
+		</script>
+	</body>
+</html>

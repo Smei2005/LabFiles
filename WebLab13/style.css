@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(136, 136, 136);
+    background-image: url("img/bodyback.jpg");
+}
+
+.main{
+    border: 2px solid rgb(255, 251, 0);
+    border-radius: 20px;
+    background-image: url("img/back.jpg");
+    display: inline-flexbox;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 5% 1% 15% 1%;
+    justify-content: center;
+}
+
+p{
+    color: #00B3F5;
+     font-size: 20px;
+      margin-left: 600px
+}
+
+.tasks{
+    margin-left: 26%;
+}

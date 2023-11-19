@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script> 
+			document.write("<p>Використання оператора циклу	<b>FOR</b></p>");	
+            alert("Обчислення факторіалу!");		
+            let number = parseInt(prompt("Введіть додатнє число"));
+            let result = 1;
+
+            for(let i = 1; i <= number; i++){
+                result = result * i;
+            }
+            document.write("<p>Факторіал числа: "+ number +"! = " + result + "</p>");
+
+            result = 1;
+			document.write("<p>Використання оператора циклу <b>WHILE</b></p>");
+            let i = 1;
+            while(i <= number){
+                result = result * i;
+                i++;
+            }
+            document.write("<p>Факторіал числа: "+ number +"! = " + result + "</p>");
+	
+			document.write("<p>Використання оператора циклу <b>DO WHILE</b></p>");
+            i = 0;
+            result = 1;
+            do{
+                i++;
+                result = result * i;
+            }while(i < number);
+            document.write("<p>Факторіал числа: "+ number +"! = " + result + "</p>");
+
+		</script>
+	</body>
+</html>

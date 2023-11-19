@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карпляк, ПП-26</title>
+</head>
+<body>
+    <script>
+        function triangleUnknownAngle(angle1, angle2, type){
+            let angle3 = 180 - (angle1 + angle2);
+            let name_angle = "";
+            name_angle = angle3 > 90 && angle3 < 180 ? "тупим" : angle3 == 90 ? "прямим" : angle3 < 90 && angle3 > 0 ? "гострим" : "неіснуючим";   
+
+            if(type == "angle") return angle3;
+            if(type == "angle_name") return name_angle;
+        }
+
+        let angle1 = 45, angle2 = 45;
+        document.write("<h1>Кут має: " + triangleUnknownAngle(angle1, angle2, 'angle') + " градусів і є " + triangleUnknownAngle(angle1, angle2, 'angle_name') + "</h1>");
+        
+    </script>
+</body>
+</html>

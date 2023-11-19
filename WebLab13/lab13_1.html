@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карпляк, ПП-26</title>
+</head>
+<body>
+    <script>
+        function cuctomClock(type, uts = 0, size, color, id){
+            let curentClock = new Date();
+            let viewClock = "";
+            let dayOfWeek = curentClock.getDay();
+            let dayOfWeek_word = {
+                1: "Понеділок", 
+                2: "Вівторок",
+                3: "Середа",
+                4: "Четвер",
+                5: "П'ятниця",
+                6: "Субота",
+                7: "Неділя"
+            };
+            
+
+            if(type == "all")
+            viewClock = "Date(dd.mm.yyyy): "+ curentClock.getDate() + "."+ curentClock.getMonth() + "." + curentClock.getFullYear() + " | Hour: " + (curentClock.getHours() + uts) + ":" + curentClock.getMinutes() + " : " + curentClock.getSeconds();
+
+            else if(type == "classic"){
+                viewClock = "Hour: " + (curentClock.getHours() + uts) + ":" + curentClock.getMinutes();
+            }
+
+            else if(type == "classic+date"){
+                viewClock = "Date: "+ curentClock.getDate() + "." + curentClock.getMonth() + " | Hour: " + (curentClock.getHours() + uts) + ":" + curentClock.getMinutes() + " : " + curentClock.getSeconds();
+            }
+
+            else if(type == "exact_classic"){
+                viewClock = "Hour: " + (curentClock.getHours() + uts) + ":" + curentClock.getMinutes() + " : " + curentClock.getSeconds() + ":" + curentClock.getMilliseconds();
+            }
+
+            else if(type == "date+day"){
+                viewClock = "Date: "+ (dayOfWeek_word[dayOfWeek]) + " " + curentClock.getDate() + "." + curentClock.getMonth() + " | Hour: " + (curentClock.getHours() + uts) + ":" + curentClock.getMinutes() + " : " + curentClock.getSeconds();
+            }
+
+            else{
+                alert("В коді невірні дані!");
+            }
+
+            document.write("<p id='"+ id +"'>"+ viewClock +"</div>");
+            document.write("<style>#"+ id +"{font-size: "+ size +"px; color: "+ color +";} </style>");
+        }
+
+        cuctomClock("all", 0, "40", "#1700FF", "cl");
+        cuctomClock("classic", 1, "30", "#E000FF", "cl1");
+        cuctomClock("date+day", 0, "30", "#BC8693", "cl4");
+        cuctomClock("classic+date", 2, "20", "#EDCE0E", "cl2");
+        cuctomClock("exact_classic", 3, "15", "#FF0000", "cl3");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Карпляк, ПП-26</title>
+	</head>	
+	<body>
+        <style>
+            
+        </style>
+		<script>
+            //16 december
+            let curentDate = new Date();
+            let dateDeadline = new Date(curentDate.getFullYear(), 11, 16, 24, 0, 0);
+            let years = "years - " + (dateDeadline.getFullYear() - curentDate.getFullYear());                       
+            let mounths = "mounth - " + (dateDeadline.getMonth() - curentDate.getMonth());
+            let days = "days - " + (dateDeadline.getDate() - curentDate.getDate());
+            let hour = (dateDeadline.getHours() == 0) ? 24 : dateDeadline.getHours();
+            let minut = (dateDeadline.getMinutes() == 0) ? 60 : dateDeadline.getHours();
+            let second = (dateDeadline.getSeconds() == 0) ? 60 : dateDeadline.getHours();
+            let hours = "hours - " + (hour - curentDate.getHours()) + ":" + (minut - curentDate.getMinutes()) + ":" + (second - curentDate.getSeconds());
+
+			document.write("<h1>До закінчення семестру залишилось: </h1>");
+            document.write("<div><p>"+ years +"</p><p>"+ mounths +"</p><p>"+ days +"</p><p>"+ hours + "</p></div>");
+            document.write("<style>h1{font-family: Georgia, 'Times New Roman', Times, serif; text-align:center;} p{text-align:center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 30px;}</style>");
+		</script>
+	</body>
+</html>

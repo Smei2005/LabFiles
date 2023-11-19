@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Карпляк, ПП-26</title>
+	</head>	
+	<body>
+		<script>
+			function html_constructor(teg, text, color, size){
+            document.write("<" + teg + " style='color:" + color + "; font-size: " + size + "px'>" + text + "</" + teg + ">");
+            }
+            function randomColor(){
+                let r = Math.random() * 255;
+                let g = Math.random() * 255;
+                let b = Math.random() * 255;
+
+                return "rgb("+ r +" , "+ g +", "+ b +")"
+            }
+
+            html_constructor("h1", "Заголовок", randomColor(), "30");  
+		</script>
+	</body>
+</html>
