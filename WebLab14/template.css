@@ -45,8 +45,12 @@ li{
     margin-top: 1%;
     margin-left: 1%;
     position: fixed;
+    background-size: cover;
+    border-radius: 40px;
+    transition: 0.7s transform cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #back:hover{
     filter:brightness(110%);
+    transform: rotate(180deg);
 }

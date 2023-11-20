@@ -5,6 +5,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(136, 136, 136);
     background-image: url("img/bodyback.jpg");
+    background-size: cover;
 }
 
 .main{
