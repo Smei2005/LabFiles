@@ -16,7 +16,15 @@
         function rand_arr(){
             let arr = [];
             for(let i=0; i < 16; i++){
-            arr.push(Math.ceil(Math.random() * 100));
+                arr.push((Math.ceil(Math.random() * 30) -15));
+            }           
+            
+            for(let i =0; i < arr.length;i++){
+                for(let j=0; j < arr.length;j++){
+                    if(arr[i] === arr[j] && i === j){
+                        arr.splice(i, 1, (Math.ceil(Math.random() * 30) -15));
+                    }
+                }
             }
             return arr;
         }
@@ -28,10 +36,41 @@
             return n < 0;
         });
 
-        let avg_neg_arr;
-        document.write("<h2>Середнє арифматичне від’ємних чисел: </h2>");
+        let avg_neg_arr = 0;
+        negetive_array.forEach(function(item){
+            avg_neg_arr = avg_neg_arr + item;
+        });        
 
-        document.write("<h2>Масив з виконаним завданням: "+array+"</h2>");
+        avg_neg_arr = (avg_neg_arr / negetive_array.length);
+        document.write("<h2>Середнє арифматичне від’ємних чисел: "+ avg_neg_arr.toFixed(1) +"</h2>");
+        
+
+        let bigA = rand_arr();
+        bigA = bigA.filter(function(n){
+            return n > 0;
+        });
+
+        bigA = bigA.filter(function(element, index, bigA) {
+            return bigA.indexOf(element) === index;
+        });
+        
+
+        let count_bigA = 0;
+        let temp_index = [];
+
+        document.write("<h3>Масив big_A: "+bigA+":</h3>");
+
+        for(let i=0; i < array.length; i++){
+        bigA.forEach(function(item){
+                if(item === array[i] && i % 2 === 1){
+                            temp_index.push(i);
+                            document.write("<h3>bigA["+ i +"] = " + item +";</h3>");
+                            count_bigA++;                  
+                }
+        }); 
+        }
+
+        document.write("<h2>Кількість чисел, що за величиною великих А і стоять на парних місцях: "+ count_bigA +"</h2>");
 
     </script>
 </body>
