@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <title>Завдання 3</title>
+</head>
+<body>
+    <a href="index.html"><img id="back" width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"></a>
+    <script>
+        document.write("<h1>Завдання 3</h1>");
+        document.write("<h2 class='task'>Програма кожну літеру замінює наступною за нею в алфавіті («я» переходить в «а»).</h2>");
+        let str = "Якщо я завтра піду у яблуневий сад я зберу яблука й принесу на ярмарок";
+
+        document.write("<h2>Строка: "+ str +".</h2>");
+        let ascii_code = 0;
+        let new_sign = "";
+
+        
+        let array_str = str.split("");
+        for(let i=0; i < array_str.length; i++){    
+            if((array_str[i].toLowerCase() !== "я"))  {
+            ascii_code = array_str[i].charCodeAt();
+            ascii_code++;
+            new_sign = String.fromCharCode(ascii_code);
+            array_str.splice(i, 1, new_sign);
+            }
+        }
+        
+        str = array_str.join("");
+        str = str.replace(/я/g, "а").replace(/Я/g, "А");
+        str = str.replace(/!/g, ' ');
+
+        document.write("<h2>Строка з заміною 'я' на 'а': "+ str +".</h2>");
+
+    </script>
+</body>
+</html>

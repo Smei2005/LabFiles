@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <a href="index.html"><img id="back" width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"></a>
+    <script>
+        document.write("<h1>Завдання 2</h1>");
+        document.write("<h2 class='task'>Підрахувати кількість літер у другому слові. Кожне слово укласти в лапки.</h2>");
+
+        function wordsWithQuotes(str) {
+            let words = str.split(" ");
+            
+            let wordsQuotes = words.map(word => `'${word}'`);
+  
+            let result = wordsQuotes.join(" ");
+            return result;
+        }
+
+        let str = "Hello world";
+        let indexToStart = str.indexOf(" ") + 1;
+        let countLetter = 0; 
+
+        for(let i = indexToStart; i < str.length; i++){
+            if(str[i] !== undefined){
+                countLetter++;
+            }
+        }
+        document.write("<h2>Строка: "+ str +".</h2>");
+        document.write("<h2>Кількість літер у другому слові: "+ countLetter +".</h2>");
+
+        
+        str = wordsWithQuotes(str);        
+        document.write("<h2>Кожне слово укладене в лапки: "+ str +".</h2>");        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <a href="index.html"><img id="back" width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"></a>
+    <script>
+        document.write("<h1>Завдання 1</h1>");
+        document.write("<h2 class='task'>Підрахувати кількість пар символів '+-'  і замінити кожен символ '*' на '/-'.</h2>");
+        
+        let str = "+-+-green+-+-red+-blue+-black";
+        let count_plus_minus = 0;
+        let temp_i = 0;
+
+        for(let i = 0; i < str.length; i++){
+            temp_i = str.indexOf("+-", i);
+            i = temp_i + 1;
+            if(temp_i === -1) break;
+            count_plus_minus++;
+        }
+
+        let strElement = document.createElement("h2");
+        strElement.textContent = "Строка: " + str;
+        document.body.appendChild(strElement);
+
+        const countElement = document.createElement("h2");
+        countElement.textContent = "кількість пар символів '+-': " + count_plus_minus;
+        document.body.appendChild(countElement);
+
+        str = str.replace(/\+-/g, '/-');
+        document.write("<h2>Строка зі зміненими символами '+-' на '/-': "+ str +"</h2>");    
+    </script>
+</body>
+</html>

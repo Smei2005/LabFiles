@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <a href="index.html"><img id="back" width="48" height="48" src="https://img.icons8.com/color/48/circled-chevron-left--v1.png" alt="circled-chevron-left--v1"></a>
+    <script>
+        function encryptionWord(str, separation=""){
+        let signs = str.split(separation);
+        
+        let mindex = 0;       
+        let sign = '';
+        let signsLength = signs.length;
+        let edgeWords = [];
+
+        edgeWords.push(signs[0]);
+        if(signs.length - 1 !== 0){
+        edgeWords.push(signs[signs.length - 1]);
+        }
+
+        signs.splice(0, 1);
+        signs.splice(signs.length - 1, 1);
+
+        for(let i = 0; i < signsLength; i++){
+            if(i % 2 == 1){
+            sign = signs[i];
+            mindex = i - 1;
+
+            signs.splice(i, 1, signs[mindex]);
+            signs.splice(mindex, 1, sign);
+            mindex = 0;
+            }
+        }
+
+        signs.splice(0, 0, edgeWords[0]);
+        signs.splice(signs.length, 0, edgeWords[1]);
+
+        let joinSigns = signs.join(separation);
+
+        return joinSigns;
+    }
+
+    function encryptionSentense(str){
+        let words = str.split(" ");
+
+        words = words.map(word => encryptionWord(word));
+
+        words = words.join(" ");
+        return words;
+    }
+
+        document.write("<h1>Завдання 4</h1>");
+        document.write("<h2 class='task'>Програма в кожному слові перемішує букви місцями крім першої та останньої букви слова.</h2>");
+        let str = "Сергій взяв старий ксилофон і почав таємниче стукати на ньому";
+        document.write("<h2>Строка: "+ str +".</h2>");
+
+        let words = encryptionSentense(str);
+
+        document.write("<h2>Рядок з перемішаними буквами: "+ words +".</h2>");
+    </script>
+</body>
+</html>
